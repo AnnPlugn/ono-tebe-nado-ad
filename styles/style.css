@@ -1,1 +1,343 @@
-/* место для вашего кода */
+/*==== ОБЩИЕ СТИЛИ ===*/
+/**********************/
+/* ТЕКСТОВЫЕ СВОЙСТВА */
+/**********************/
+.header,
+.footer {
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* h1 */
+.cover__title {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 115%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 385px;
+}
+
+/* h2 */
+.lots__heading,
+.about__title {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+/* h3 */
+.card__title {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+/* p (БОЛЬШИНСТВО) */
+.card__text,
+.about__text {
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+/* СТАНДАРТ ВЫСОТЫ ПОДЧЁРКИВАНИЯ ДЛЯ ТЕКСТОВ */
+.header__link,
+.address__item,
+.lots__look-more-link,
+.footer__menu-link {
+  text-underline-offset: 4px;
+}
+
+.address__item,
+.card__title {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+/* ТЕКСТОВЫЕ СВОЙСТВА ЭЛЕМЕНТОВ ИЗ СЕКЦИЙ */
+/* ТЕКСТ СЕКЦИИ COVER */
+.cover__description-text {
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  word-spacing: 18.5px;
+}
+
+.bet-button {
+  font-family: 'Raleway';
+  font-weight: 500;
+  font-size: 22px;
+  border: 1px solid #fff;
+  padding: 12px 32px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* ТЕКСТ СЕКЦИИ LOTS */
+.lots__look-more-link {
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-size: 20px;
+  display: inline-block;
+}
+
+/*********************/
+/*** СЕКЦИЯ HEADER ***/
+/*********************/
+.header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  min-height: 293px;
+  padding: 89px 50px 93px;
+}
+
+.header__links-list {
+  display: flex;
+  gap: 33px;
+  list-style-type: circle;
+}
+
+.header__links-list-item_no-bullit {
+  list-style-type: none;
+}
+
+.header__logo {
+  display: block;
+  width: 135px;
+  height: 100px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+
+  font-style: normal;
+  line-height: 1.35;
+}
+
+.header__address {
+  justify-self: end;
+  max-width: 240px;
+}
+
+/********************/
+/*** СЕКЦИЯ COVER ***/
+/********************/
+.cover {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 757px;
+  padding: 165px 50px 50px;
+  background: url("../images/cover.jpg") center / cover no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.cover__title,
+.cover__description-text,
+.bet-button {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+
+  text-transform: uppercase;
+}
+
+
+.aligned-text {
+  display: block;
+  width: 100%;
+}
+
+.aligned-text_left {
+  text-align: left;
+}
+
+.aligned-text_center {
+  text-align: center;
+}
+
+.aligned-text_right {
+  text-align: right;
+}
+
+.letter-spacing-extended {
+  letter-spacing: 0.3em;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0;
+}
+
+.cover__description {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/*******************/
+/*** СЕКЦИЯ LOTS ***/
+/*******************/
+.lots_margins {
+  margin: 180px 24px 0;
+}
+
+.lots__heading_margins {
+  margin-bottom: 27px;
+  margin-left: 40px;
+}
+
+.lots__card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.lots__card-list-item {
+  width: 334px;
+  min-height: 569px;
+}
+
+.card,
+.card-link {
+  height: 100%;
+  text-decoration: none;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 34px;
+  padding: 48px 40px;
+  color: #fff;
+}
+
+.card__title,
+.card__text {
+  position: relative;
+  z-index: 1;
+}
+
+.card_type_film {
+  background: url("../images/card-lot-01.jpg") center / cover no-repeat;
+}
+
+.card_type_book {
+  background: url("../images/card-lot-02.jpg") center / cover no-repeat;
+}
+
+.card_type_picture {
+  background: url("../images/card-lot-03.jpg") center / cover no-repeat;
+}
+
+
+.lots__look-more-link_margins {
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+/********************/
+/*** СЕКЦИЯ ABOUT ***/
+/********************/
+.about {
+  display: grid;
+  grid-template-columns: 334px 1fr;
+  column-gap: 24px;
+  min-height: 595px;
+}
+
+.about_margins {
+  margin: 120px 24px 0;
+}
+
+.about__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  min-height: 240px;
+  margin: 35px auto;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.about__logo-image {
+  width: 148px;
+  height: 114px;
+}
+
+.text__column {
+  display: flex;
+  flex-direction: column;
+  gap: 100px; /* между заголовком и текстом */
+  padding-top: 136px;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* между параграфами */
+}
+
+/*********************/
+/*** СЕКЦИЯ FOOTER ***/
+/*********************/
+.footer {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: start;
+  min-height: 180px;
+  padding: 0 50px;
+}
+
+.footer_margins {
+  margin-top: 180px;
+}
+
+.footer__address {
+  max-width: 264px;
+}
+
+.footer__menu-list {
+  text-align: center;
+  list-style-type: none;
+  white-space: nowrap;
+}
+
+.footer__social-list {
+  display: flex;
+  justify-self: end;
+  gap: 48px;
+  list-style-type: none;
+}
+
+.footer__social-link {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
